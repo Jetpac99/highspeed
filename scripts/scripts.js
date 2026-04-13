@@ -32,6 +32,59 @@ function buildHeroBlock(main) {
 }
 
 /**
+ * Limits homepage-only proof changes to the real page main element.
+ * @param {Element} main The container element
+ * @returns {boolean} Whether the current main is the homepage main element
+ */
+function isHomepageMain(main) {
+  return main === document.querySelector('main') && window.location.pathname === '/';
+}
+
+/**
+ * Replaces the boilerplate homepage heading with proof text before the hero is auto-built.
+ * @param {Element} main The container element
+ */
+function replaceHomepageHeroHeading(main) {
+  if (!isHomepageMain(main)) {
+    return;
+  }
+
+  const heading = main.querySelector('h1');
+  if (!heading) {
+    return;
+  }
+
+  heading.textContent = 'Nathan, i think this is going to work';
+  heading.id = 'nathan-i-think-this-is-going-to-work';
+}
+
+/**
+ * Adds a simple proof section to the homepage without affecting other routes or fragments.
+ * @param {Element} main The container element
+ */
+function buildHomepageProofSection(main) {
+  if (!isHomepageMain(main) || main.querySelector('.homepage-proof')) {
+    return;
+  }
+
+  const section = document.createElement('div');
+  section.classList.add('homepage-proof-section');
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'default-content-wrapper';
+
+  const proof = document.createElement('p');
+  proof.className = 'homepage-proof';
+  proof.textContent = 'Neil woz ere';
+
+  wrapper.append(proof);
+  section.append(wrapper);
+
+  const heroSection = main.firstElementChild?.querySelector('.hero') ? main.firstElementChild : null;
+  main.insertBefore(section, heroSection ? heroSection.nextElementSibling : main.firstElementChild);
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
@@ -67,7 +120,9 @@ function buildAutoBlocks(main) {
       });
     }
 
+    replaceHomepageHeroHeading(main);
     buildHeroBlock(main);
+    buildHomepageProofSection(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
