@@ -44,6 +44,10 @@ body.cargo-page [hidden] {
   display: none !important;
 }
 
+body.cargo-page .cargo-header-container > .default-content-wrapper {
+  display: none;
+}
+
 body.cargo-page header,
 body.cargo-page footer {
   height: 0;

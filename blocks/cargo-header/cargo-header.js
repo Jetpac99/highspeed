@@ -82,6 +82,8 @@ export default function decorate(block) {
 
   const logo = logoCell.querySelector('a').cloneNode(true);
   logo.className = 'cargo-header-logo';
+  const logoImage = logo.querySelector('img');
+  if (logoImage) logoImage.src = '/assets/cargo-home/cargo-logo.svg';
 
   const nav = document.createElement('nav');
   nav.className = 'cargo-header-nav';

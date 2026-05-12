@@ -12,6 +12,13 @@ function setActive(block, index) {
   block.dataset.activeSlide = String(index);
 }
 
+function getHeroImagePath(copy, index) {
+  const text = copy.textContent.toLowerCase();
+  if (text.includes('myvs')) return '/assets/cargo-home/hero-myvs.jpg';
+  if (text.includes('seoul') || text.includes('icn')) return '/assets/cargo-home/hero-seoul.jpg';
+  return index === 1 ? '/assets/cargo-home/hero-myvs.jpg' : '/assets/cargo-home/hero-schedule.jpg';
+}
+
 export default function decorate(block) {
   const rows = [...block.children];
   const viewport = document.createElement('div');
@@ -27,6 +34,8 @@ export default function decorate(block) {
     imageCell.className = 'cargo-hero-image';
     copyCell.className = 'cargo-hero-copy';
     ctaCell.className = 'cargo-hero-cta';
+    const image = imageCell.querySelector('img');
+    if (image) image.src = getHeroImagePath(copyCell, index);
     const link = ctaCell.querySelector('a');
     if (link) link.className = 'cargo-button';
     viewport.append(slide);
