@@ -12,6 +12,10 @@ import {
   loadCSS,
 } from './aem.js';
 
+function isCargoDemoPath() {
+  return ['/cargo-home', '/cargo-home.html'].includes(window.location.pathname);
+}
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -187,6 +191,7 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
+  if (isCargoDemoPath()) doc.body.classList.add('cargo-page');
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
@@ -211,7 +216,7 @@ async function loadEager(doc) {
  */
 async function loadLazy(doc) {
   const isCargoDemoPage = doc.body.classList.contains('cargo-page')
-    || window.location.pathname.endsWith('/cargo-home.html');
+    || isCargoDemoPath();
 
   if (!isCargoDemoPage) loadHeader(doc.querySelector('header'));
 
