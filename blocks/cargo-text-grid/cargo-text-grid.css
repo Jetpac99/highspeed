@@ -10,11 +10,12 @@
 }
 
 .cargo-text-grid-card h3 {
-  font-size: 25px;
+  font-size: 22px;
+  line-height: 28.6px;
 }
 
 .cargo-text-grid-card p {
-  line-height: 1.5;
+  line-height: 28px;
 }
 
 .cargo-text-grid-cta p {

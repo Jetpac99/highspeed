@@ -38,26 +38,30 @@
 }
 
 .cargo-hero-copy {
-  top: 200px;
+  top: 220px;
   max-width: 438px;
-  padding: 28px 22px 18px;
-  background: rgb(255 255 255 / 72%);
+  padding: 0;
+  background: transparent;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 28%);
 }
 
-.cargo-hero-copy h2 {
-  margin: 0 0 22px;
-  font-size: 33px;
-  line-height: 0.92;
+body.cargo-page .cargo-hero-copy h2 {
+  margin: 0 0 26px;
+  color: #fff;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 30.4px;
+  line-height: 28px;
 }
 
-.cargo-hero-copy p {
-  color: var(--cargo-purple);
-  font-size: 22px;
-  line-height: 1.25;
+body.cargo-page .cargo-hero-copy p {
+  color: #fff;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 19.2px;
+  line-height: 28px;
 }
 
 .cargo-hero-cta {
-  top: 212px;
+  top: 238px;
   width: max-content;
 }
 
@@ -112,7 +116,7 @@
   .cargo-hero-slide {
     display: grid;
     min-height: 0;
-    background: #f3a0b5;
+    background: #d40a3d;
   }
 
   .cargo-hero-image {
@@ -133,11 +137,13 @@
   }
 
   .cargo-hero-copy h2 {
-    font-size: 31px;
+    font-size: 30.4px;
+    line-height: 28px;
   }
 
   .cargo-hero-copy p {
-    font-size: 22px;
+    font-size: 19.2px;
+    line-height: 28px;
   }
 
   .cargo-hero-cta {

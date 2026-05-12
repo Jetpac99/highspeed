@@ -22,16 +22,17 @@
 }
 
 .cargo-card-grid-body h3 {
-  font-size: 25px;
+  font-size: 22px;
+  line-height: 28.6px;
 }
 
 .cargo-card-grid-body p {
-  line-height: 1.5;
+  line-height: 28px;
 }
 
 .cargo-card-grid-body strong {
   color: var(--cargo-text);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -44,8 +45,8 @@
 }
 
 .cargo-card-grid.latest .cargo-card-grid-body h3 {
-  font-size: 25px;
-  line-height: 1.15;
+  font-size: 22px;
+  line-height: 28.6px;
 }
 
 @media (width >= 800px) {
@@ -71,6 +72,6 @@
 
   .cargo-card-grid-body h3,
   .cargo-card-grid.latest .cargo-card-grid-body h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
 }

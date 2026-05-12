@@ -10,11 +10,12 @@
   padding: 38px 0 42px;
 }
 
-.cargo-footer-column h3 {
-  margin-bottom: 16px;
+body.cargo-page .cargo-footer-column h3 {
+  margin-bottom: 0;
   color: var(--cargo-text);
-  font-family: "Gotham, Gotham-Book", roboto, sans-serif;
-  font-size: 19px;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20.8px;
 }
 
 .cargo-footer-column ul {
@@ -27,9 +28,11 @@
   margin-bottom: 7px;
 }
 
-.cargo-footer-column a:any-link {
-  color: #616161;
-  font-size: 14px;
+body.cargo-page .cargo-footer-column a:any-link {
+  color: #666;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 24px;
 }
 
 .cargo-cookie-banner {
@@ -51,7 +54,8 @@
 .cargo-cookie-banner p {
   margin: 0;
   color: #555;
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 .cargo-cookie-close {

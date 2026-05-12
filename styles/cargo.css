@@ -1,19 +1,43 @@
+@font-face {
+  font-family: gotham-light;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/gotham-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: gotham-book;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/gotham-book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: gotham-medium;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/gotham-medium.woff2") format("woff2");
+}
+
 body.cargo-page {
-  --cargo-red: #e4003a;
-  --cargo-red-dark: #c90033;
+  --cargo-red: #da0530;
+  --cargo-red-dark: #b90429;
   --cargo-purple: #61126b;
   --cargo-purple-dark: #4b0056;
-  --cargo-text: #1d1d1f;
-  --cargo-muted: #5d6470;
-  --cargo-border: #d6d6d6;
+  --cargo-text: #222;
+  --cargo-muted: #666;
+  --cargo-border: #ddd;
   --cargo-footer: #e9e9e9;
   --cargo-shell: min(1140px, calc(100vw - 32px));
 
   background: #fff;
   color: var(--cargo-text);
-  font-family: "Gotham, Gotham-Book", roboto, sans-serif;
-  font-size: 19px;
-  line-height: 1.45;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 body.cargo-page [hidden] {
@@ -44,21 +68,21 @@ body.cargo-page h1,
 body.cargo-page h2,
 body.cargo-page h3 {
   color: var(--cargo-purple);
-  font-family: "Gotham, Gotham-Light", roboto-condensed, sans-serif;
+  font-family: gotham-light, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0;
 }
 
 body.cargo-page h2 {
-  margin: 52px 0 28px;
-  font-size: 36px;
-  line-height: 1.1;
+  margin: 52px 0 31px;
+  font-size: 32px;
+  line-height: 41.6px;
 }
 
 body.cargo-page h3 {
-  margin: 0 0 18px;
-  font-size: 26px;
-  line-height: 1.12;
+  margin: 0 0 15px;
+  font-size: 22px;
+  line-height: 28.6px;
 }
 
 body.cargo-page p {
@@ -91,20 +115,26 @@ body.cargo-page .cargo-arrow-link::after {
   font-weight: 700;
 }
 
+body.cargo-page .cargo-arrow-link:any-link {
+  font-size: 16px;
+  line-height: 22px;
+}
+
 body.cargo-page .cargo-button:any-link,
 body.cargo-page button.cargo-button {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  min-height: 52px;
-  border: 2px solid var(--cargo-red);
+  min-height: 46px;
+  border: 0;
   border-radius: 4px;
-  padding: 0 24px;
+  padding: 14px 24px;
   background: var(--cargo-red);
   color: #fff;
-  font: inherit;
-  font-weight: 600;
-  line-height: 1;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
   text-decoration: none;
   cursor: pointer;
 }
@@ -119,14 +149,4 @@ body.cargo-page button.cargo-button:hover {
 body.cargo-page .cargo-button::after {
   content: "->";
   font-weight: 700;
-}
-
-@media (width >= 900px) {
-  body.cargo-page {
-    font-size: 19px;
-  }
-
-  body.cargo-page h2 {
-    font-size: 38px;
-  }
 }

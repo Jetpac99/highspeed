@@ -3,7 +3,8 @@
   z-index: 20;
   width: 100%;
   background: #fff;
-  font-size: 17px;
+  font-size: 16px;
+  line-height: 20.8px;
 }
 
 .cargo-header-shell {
@@ -33,11 +34,6 @@
 .cargo-header-account-inner a:not(:first-child) {
   border-left: 2px solid #fff;
   padding-left: 18px;
-}
-
-.cargo-header-account-inner a:any-link {
-  color: #fff;
-  font-size: 17px;
 }
 
 .cargo-header-main-bar {
@@ -78,7 +74,8 @@
   background: transparent;
   color: var(--cargo-purple);
   font: inherit;
-  font-weight: 700;
+  font-family: gotham-medium, Arial, sans-serif;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -111,7 +108,8 @@
 .cargo-header-dropdown-title {
   margin: 0 0 10px;
   color: var(--cargo-purple);
-  font-weight: 700;
+  font-family: gotham-medium, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .cargo-header-dropdown li,
@@ -124,7 +122,14 @@
 .cargo-header-panel a:any-link,
 .cargo-header-mobile-nav a:any-link {
   color: var(--cargo-text);
-  font-size: 15px;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 14px;
+}
+
+body.cargo-page .cargo-header-account-inner a:any-link {
+  color: #fff;
+  font-family: gotham-book, Arial, sans-serif;
+  font-size: 16px;
 }
 
 .cargo-header-tools {
@@ -168,17 +173,20 @@
   content: "♧";
 }
 
-.cargo-header-track:any-link {
+body.cargo-page .cargo-header-track:any-link {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
-  padding: 0 18px;
+  min-height: 45px;
+  padding: 12px;
   background: var(--cargo-red);
   color: #fff;
-  font-weight: 700;
+  font-family: gotham-medium, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
 }
 
-.cargo-header-track:hover {
+body.cargo-page .cargo-header-track:hover {
   background: var(--cargo-red-dark);
   color: #fff;
 }
@@ -217,7 +225,7 @@
   display: block;
   margin-top: 3px;
   color: var(--cargo-muted);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .cargo-header-panel-close {

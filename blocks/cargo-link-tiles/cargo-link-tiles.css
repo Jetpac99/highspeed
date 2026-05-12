@@ -37,6 +37,12 @@
   margin: 0;
 }
 
+body.cargo-page .cargo-link-tile-copy a:any-link {
+  font-family: gotham-light, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
 @media (width < 700px) {
   .cargo-link-tiles {
     display: none;
