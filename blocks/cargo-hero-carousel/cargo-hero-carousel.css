@@ -1,0 +1,159 @@
+.cargo-hero-carousel {
+  max-width: var(--cargo-shell);
+  margin: 0 auto;
+  position: relative;
+}
+
+.cargo-hero-slide {
+  position: relative;
+  min-height: 482px;
+  overflow: hidden;
+}
+
+.cargo-hero-slide[hidden] {
+  display: none;
+}
+
+.cargo-hero-image,
+.cargo-hero-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.cargo-hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.cargo-hero-image img {
+  display: block;
+  object-fit: cover;
+}
+
+.cargo-hero-copy,
+.cargo-hero-cta {
+  position: relative;
+  z-index: 1;
+  margin-left: 96px;
+}
+
+.cargo-hero-copy {
+  top: 200px;
+  max-width: 438px;
+  padding: 28px 22px 18px;
+  background: rgb(255 255 255 / 72%);
+}
+
+.cargo-hero-copy h2 {
+  margin: 0 0 22px;
+  font-size: 33px;
+  line-height: 0.92;
+}
+
+.cargo-hero-copy p {
+  color: var(--cargo-purple);
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.cargo-hero-cta {
+  top: 212px;
+  width: max-content;
+}
+
+.cargo-hero-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.cargo-hero-control {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(50%);
+}
+
+.cargo-hero-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.cargo-hero-dot {
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: var(--cargo-red);
+  text-indent: 120%;
+  opacity: 0.45;
+  cursor: pointer;
+}
+
+.cargo-hero-dot[aria-selected="true"] {
+  opacity: 1;
+}
+
+@media (width < 700px) {
+  .cargo-hero-carousel {
+    max-width: none;
+    margin-inline: 20px;
+  }
+
+  .cargo-hero-slide {
+    display: grid;
+    min-height: 0;
+    background: #f3a0b5;
+  }
+
+  .cargo-hero-image {
+    position: static;
+    height: 146px;
+  }
+
+  .cargo-hero-copy,
+  .cargo-hero-cta {
+    top: auto;
+    margin-left: 0;
+  }
+
+  .cargo-hero-copy {
+    max-width: none;
+    padding: 20px 22px 14px;
+    background: transparent;
+  }
+
+  .cargo-hero-copy h2 {
+    font-size: 31px;
+  }
+
+  .cargo-hero-copy p {
+    font-size: 22px;
+  }
+
+  .cargo-hero-cta {
+    padding: 0 22px 40px;
+  }
+
+  .cargo-hero-controls {
+    bottom: 14px;
+  }
+
+  .cargo-hero-dot {
+    background: #fff;
+    opacity: 1;
+  }
+
+  .cargo-hero-dot[aria-selected="true"] {
+    outline: 2px solid var(--cargo-red);
+  }
+}

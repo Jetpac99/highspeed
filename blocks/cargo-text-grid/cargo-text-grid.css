@@ -1,0 +1,38 @@
+.cargo-text-grid-list {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 58px;
+}
+
+.cargo-text-grid-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.cargo-text-grid-card h3 {
+  font-size: 25px;
+}
+
+.cargo-text-grid-card p {
+  line-height: 1.5;
+}
+
+.cargo-text-grid-cta p {
+  margin: 0;
+}
+
+@media (width >= 800px) {
+  .cargo-text-grid-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cargo-text-grid-card {
+    padding-right: 36px;
+    border-right: 1px solid var(--cargo-border);
+  }
+
+  .cargo-text-grid-card:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+}

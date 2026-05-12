@@ -1,0 +1,132 @@
+body.cargo-page {
+  --cargo-red: #e4003a;
+  --cargo-red-dark: #c90033;
+  --cargo-purple: #61126b;
+  --cargo-purple-dark: #4b0056;
+  --cargo-text: #1d1d1f;
+  --cargo-muted: #5d6470;
+  --cargo-border: #d6d6d6;
+  --cargo-footer: #e9e9e9;
+  --cargo-shell: min(1140px, calc(100vw - 32px));
+
+  background: #fff;
+  color: var(--cargo-text);
+  font-family: "Gotham, Gotham-Book", roboto, sans-serif;
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+body.cargo-page [hidden] {
+  display: none !important;
+}
+
+body.cargo-page header,
+body.cargo-page footer {
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+body.cargo-page main > div {
+  margin: 0;
+}
+
+body.cargo-page main > div:not(:first-child) {
+  max-width: var(--cargo-shell);
+  margin-inline: auto;
+}
+
+body.cargo-page main > div:nth-last-child(1) {
+  max-width: none;
+}
+
+body.cargo-page h1,
+body.cargo-page h2,
+body.cargo-page h3 {
+  color: var(--cargo-purple);
+  font-family: "Gotham, Gotham-Light", roboto-condensed, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+body.cargo-page h2 {
+  margin: 52px 0 28px;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+body.cargo-page h3 {
+  margin: 0 0 18px;
+  font-size: 26px;
+  line-height: 1.12;
+}
+
+body.cargo-page p {
+  margin: 0 0 18px;
+}
+
+body.cargo-page a:any-link {
+  color: var(--cargo-purple);
+  text-decoration: none;
+}
+
+body.cargo-page a:hover {
+  color: var(--cargo-red);
+  text-decoration: none;
+}
+
+body.cargo-page .cargo-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+body.cargo-page .cargo-arrow-link::after {
+  content: "->";
+  display: inline-block;
+  margin-left: 12px;
+  color: var(--cargo-red);
+  font-weight: 700;
+}
+
+body.cargo-page .cargo-button:any-link,
+body.cargo-page button.cargo-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  border: 2px solid var(--cargo-red);
+  border-radius: 4px;
+  padding: 0 24px;
+  background: var(--cargo-red);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.cargo-page .cargo-button:hover,
+body.cargo-page button.cargo-button:hover {
+  background: var(--cargo-red-dark);
+  border-color: var(--cargo-red-dark);
+  color: #fff;
+}
+
+body.cargo-page .cargo-button::after {
+  content: "->";
+  font-weight: 700;
+}
+
+@media (width >= 900px) {
+  body.cargo-page {
+    font-size: 19px;
+  }
+
+  body.cargo-page h2 {
+    font-size: 38px;
+  }
+}
